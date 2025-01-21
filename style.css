@@ -86,7 +86,9 @@ header {
     position: relative; /* Needed for the hover effect */
     transition: color 0.3s ease-in-out;
 }
-
+.sercolor{
+    color: #A72628;
+}
 .nav-links ul li a::after {
     content: "";
     position: absolute;
@@ -111,7 +113,41 @@ header {
     text-decoration: underline;
     text-underline-offset: 4px; /* Optional, adjust underline position */
 }
-
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0px ;
+    min-width: 300px;
+    z-index: 10;
+  }
+  
+  .nav-links .dropdown-menu li {
+    padding:  0px;
+    margin: 0%;
+  }
+  
+  .nav-links .dropdown-menu li a {
+    text-decoration: none;
+    color: #A72628;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links .dropdown-menu li a:hover {
+    color: #00194D;
+    background-color: #f4f4f4;
+  }
+  
+  .nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 /* ----------------------------------------------end   Header---------------------------------------------------------- */
 /* -----------------Call And Whatsapp Button--------------------- */
 .quick_contact a {
@@ -139,7 +175,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2196f3;
+  background-color: #A72628;
 }
 .quick_contact_icon {
  
@@ -181,10 +217,17 @@ header {
   width: 100%;
  background-size: cover;
 }
+.slide-Form-Container{
+    background-color: #00194D;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
 /* ---------------Form----------------- */
 .form-container{
-    background-color: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    background-color: #00194D;
+   
+  }
+  .form-group label{
+    color: white;
   }
   .form-control{
     background-color: #f4f4f4;
@@ -360,6 +403,50 @@ border-radius: 10px;
   margin-top: 10px;
   text-align: center;
 }
+/* -------------------------------------------------Testimonials-------------------------------------------------------- */
+
+  .testimonials-section .left-image {
+    position: relative;
+  }
+  .testimonials-section .left-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .testimonials-section .left-image .quote-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ffc107;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+  }
+  .testimonials-section .testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .testimonials-section .testimonial-card .profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .testimonials-section .testimonial-card .profile-info {
+    margin-left: 15px;
+  }
+  
+  .splide__slide {
+    position: relative;
+  }
+  .splide__arrow--prev {
+    left: 0em;
+  }
+  .splide__arrow--next {
+    right: 0em;
+  }
 /* --------------Faq------------------ */
 .accordion-header .accordion-button {
     font-size: 1.25rem; /* Increase font size */

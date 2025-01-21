@@ -37,4 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
 });
 
-//Counter
+//Slider
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#Testimonials_splide', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+    }).mount();
+});
