@@ -45,3 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: true,
     }).mount();
 });
+
+const thumbnails = document.querySelectorAll('.thumbnail');
+const mainImage = document.getElementById('mainImage');
+
+// Har thumbnail pe click event listener lagao
+thumbnails.forEach(thumbnail => {
+  thumbnail.addEventListener('click', () => {
+    // Main image ka src update karo
+    mainImage.src = thumbnail.src;
+  });
+});
