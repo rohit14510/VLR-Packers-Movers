@@ -688,3 +688,72 @@ border-radius: 10px;
 .thumbnail:hover {
   transform: scale(1.1);
 }
+ /* --------------------------------------------Service Page------------------------------------------------------- */
+ .ser_Card{
+  border: 1px solid #f4f4f4 ;
+  background-color: #fff;
+}
+.ser_Card-title{
+  color: black;
+  transition: .5s;
+}
+.ser_Card:hover .ser_Card-title{
+  color: #e71b00;
+}
+.Book-link{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  background-color: #e71b00;
+ 
+}
+.Book-link:hover{
+  background-color: #e71b00 !important;
+  color: white;
+}
+.ser_Card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Optional: for rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.ser_Card:hover {
+transform: translateY(-10px);
+}
+
+.ser_Card img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.img-container{
+overflow: hidden;
+}
+.ser_Card:hover img {
+  transform: scale(1.1); 
+}
+
+.ser_Card img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.ser_Card:hover img::before {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.ser_Card .p-4 {
+  position: relative;
+  z-index: 3; /* Ensure content stays above the overlay */
+}
